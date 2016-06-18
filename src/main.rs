@@ -5,12 +5,12 @@ pub mod common;
 pub mod prob1;
 pub mod prob2;
 pub mod prob8;
+pub mod prob9;
+pub mod prob10;
 
 use common::Problem;
 use prob2::*;
-use prob8::*;
 
 fn main() {
-  let a = find_answer(4);
-  println!("{}", a);
+//  println!("{:?}", a);
 }

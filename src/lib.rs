@@ -4,10 +4,13 @@ extern crate num;
 pub mod common;
 pub mod prob1;
 pub mod prob2;
+pub mod prob3;
 pub mod prob5;
 pub mod prob6;
 pub mod prob7;
 pub mod prob8;
+pub mod prob9;
+pub mod prob10;
 
 #[cfg(test)]
 mod tests {
@@ -29,6 +32,14 @@ mod tests {
     assert_eq!(1, next_fib(Some(0), None));
     assert_eq!(1, next_fib(Some(0), Some(1)));
     assert_eq!(2, next_fib(Some(1), Some(1)));
+  }
+
+  #[test]
+  fn test_probl3() {
+    use prob3::*;
+
+    assert_eq!(Some(29), find_answer(13195));
+    assert_eq!(Some(6857), find_answer(600851475143));
   }
 
   #[test]
@@ -62,5 +73,23 @@ mod tests {
 
     assert_eq!(5832, find_answer(4));
     assert_eq!(23514624000, find_answer(13));
+  }
+
+  #[test]
+  fn test_probl9() {
+    use prob9::*;
+
+    let (a, b, c) = find_answer();
+    assert_eq!(1000, a + b + c);
+    assert_eq!(c * c, a * a + b * b);
+  }
+
+  #[test]
+  fn test_probl10() {
+    use prob10::*;
+
+    assert_eq!(17, find_answer(10));
+    assert_eq!(77, find_answer(20));
+    assert_eq!(142913828922, find_answer(2_000_000));
   }
 }

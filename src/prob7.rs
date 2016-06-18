@@ -6,7 +6,7 @@
 use common::Problem;
 
 pub fn find_answer(n: usize) -> i32 {
-  let mut primes: Vec<i32> = vec![2, 3, 5, 7 ,11, 13];
+  let mut primes: Vec<i32> = vec![2, 3, 5, 7, 11, 13];
 
   if n < primes.len() {
     return primes[n];
