@@ -5,6 +5,7 @@ pub mod common;
 pub mod prob1;
 pub mod prob2;
 pub mod prob3;
+pub mod prob4;
 pub mod prob5;
 pub mod prob6;
 pub mod prob7;
@@ -40,6 +41,17 @@ mod tests {
 
     assert_eq!(Some(29), find_answer(13195));
     assert_eq!(Some(6857), find_answer(600851475143));
+  }
+
+  #[test]
+  fn test_probl4() {
+    use prob4::*;
+
+    assert!(is_palindrome(96469));
+    assert!(is_palindrome(9669));
+    assert!(is_palindrome(1));
+
+    assert_eq!(Some(906609), find_answer());
   }
 
   #[test]

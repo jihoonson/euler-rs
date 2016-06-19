@@ -11,7 +11,7 @@ pub fn simple_sieve(n: usize) -> Vec<usize> {
   }
 
   let mut is_prime = vec![true; n + 1];
-  is_prime[0] = false; // keep positions for 0 and 1 for easy access
+  is_prime[0] = false; // keep positions for 0 and 1 for direct access
   is_prime[1] = false;
 
   for cand in 2..n + 1 {
